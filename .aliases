@@ -1,0 +1,22 @@
+#
+# These are alias I prefer to be setup
+#
+alias grep='grep -i'
+
+alias sp.jdk8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
+alias sp.jdk7='export JAVA_HOME=`/usr/libexec/java_home -v 1.7`'
+alias sp.jdk6='export JAVA_HOME=`/usr/libexec/java_home -v 1.6`'
+
+alias sp.cd-fuse62='cd ~/Development/jboss-fuse-6.2.0.redhat-133'
+
+#docker_exec() {
+# docker exec -i -t $1 /bin/bash
+#}
+#alias de=docker_exec
+# Connect to the fuse client directly
+#docker_fuse_client() {
+# docker exec -i -t -u fuse $1 /opt/jbossfuse/bin/client
+#}
+#alias fuse=docker_fuse_client
+alias dp="docker ps"
+alias dc="docker-compose"
