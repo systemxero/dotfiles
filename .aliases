@@ -1,22 +1,50 @@
 #
-# These are alias I prefer to be setup
+# Loaded from .zshrc
 #
-alias grep='grep -i'
 
-alias sp.jdk8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
-alias sp.jdk7='export JAVA_HOME=`/usr/libexec/java_home -v 1.7`'
-alias sp.jdk6='export JAVA_HOME=`/usr/libexec/java_home -v 1.6`'
+alias tailf='tail -f'
 
-alias sp.cd-fuse62='cd ~/Development/jboss-fuse-6.2.0.redhat-133'
+alias lld='ls -d1 */'
+alias ll='ls -l'
+alias lli='ls -val'
+alias llt='ls -lart'
+alias lla='ls -lart'
 
-#docker_exec() {
-# docker exec -i -t $1 /bin/bash
-#}
-#alias de=docker_exec
-# Connect to the fuse client directly
-#docker_fuse_client() {
-# docker exec -i -t -u fuse $1 /opt/jbossfuse/bin/client
-#}
-#alias fuse=docker_fuse_client
-alias dp="docker ps"
-alias dc="docker-compose"
+alias hgrep='history |grep '
+
+#
+# Jasypt Stuff
+#
+function jasypt-decrypt() {
+    /Users/scott.pumer/Applications/jasypt/bin/decrypt.sh algorithm=PBEWithMD5AndDES input="$1" password=FuseInator
+}
+
+alias jasypt-encrypt="/Users/scott.pumer/Downloads/jasypt/bin/encrypt.sh algorithm=PBEWithMD5AndDES input="$1" password=<password here>"
+
+#
+# Docker aliases
+#
+docker_fuse_log_tail() {
+    docker exec -i -t $1 tail ---dis -f /opt/spring/log/spring.log
+}
+alias dtail=docker_fuse_log_tail
+
+# Connect to a shell
+docker_exec() {
+    docker exec -i -t $1 /bin/bash
+}
+alias de=docker_exec
+
+alias dsall="docker stop $(docker ps -a -q)"
+alias ds-drm="docker stop $1; docker rm $1"
+alias drmall="docker ps -a -q | xargs -n 1 -P 8 -I {} docker rm {}"
+alias dl="docker logs -f $1"
+alias dps="docker ps -a --format \"table $(tput setaf 2){{.ID}}\t $(tput setaf 1){{.Names}}\t $(tput setaf 4){{.Status}}{{.Ports}}$(tput sgr0)\""
+alias dcup="docker-compose up -d $*"
+alias drm="echo 'Docker rm -f'; docker rm -f"
+
+
+alias mci='mvn clean install'
+alias mgs='mvn generate-sources generate-resources generate-test-sources generate-test-resources'
+
+

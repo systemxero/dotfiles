@@ -1,0 +1,6 @@
+
+### loaded from .zshrc 
+dockerRemoveAll() {
+    docker ps -q |xargs docker stop
+    docker ps -a -q -f status=exited |xargs docker rm
+}

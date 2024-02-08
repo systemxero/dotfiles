@@ -1,0 +1,32 @@
+[user]
+        name = Scott Pumer
+        email = scott.pumer@omnicell.com
+[alias]
+	st = status
+        lll = log --graph --decorate --oneline --all --color --pretty=colorful --date=relative
+        ll = log --graph --decorate --oneline --all --color --pretty=colorful --date=relative --max-count=25
+	dif = diff
+	co = checkout
+        swc = switch -c
+        pushup = !git push -u origin HEAD
+[color]
+        ui = auto
+        branch = auto
+        diff = auto
+        interactive = auto
+        status = auto
+[color "decorate"]
+        # these colors are explicit settings for the official
+  # defaults, here to make it easier to customize
+        head = cyan bold
+        branch = green bold
+        tag = yellow bold
+        remoteBranch = red bold
+        stash = magenta bold
+[pretty]
+        colorful = '%C(auto)%h %d %s (%Cblue%an, %Cred%ad%Creset)'
+        today = '%C(auto)%h %d %s'
+[core]
+        autocrlf = input
+[fetch]
+        prune = true
