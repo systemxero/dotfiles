@@ -55,6 +55,19 @@ alias java17='export JAVA_HOME=$JAVA_17_HOME'
 alias java21='export JAVA_HOME=$JAVA_21_HOME'
 java11
 
+# python
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
+
+plugin=(
+  pyenv
+)
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
 #autoload -U colors && colors
 
 bindkey  "^[[H"   beginning-of-line
