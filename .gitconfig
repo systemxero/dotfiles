@@ -1,6 +1,6 @@
 [user]
-        name = Scott Pumer
-        email = scott.pumer@omnicell.com
+        name = committer
+        email = committer @ somewhere.com
 [alias]
 	st = status
         lll = log --graph --decorate --oneline --all --color --pretty=colorful --date=relative
