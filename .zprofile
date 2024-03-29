@@ -3,5 +3,5 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
 # Added by Toolbox App
-export PATH="$PATH:/Users/scott.pumer/Library/Application Support/JetBrains/Toolbox/scripts"
+export PATH="$PATH:~/Library/Application Support/JetBrains/Toolbox/scripts"
 
