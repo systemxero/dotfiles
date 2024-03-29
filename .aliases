@@ -16,10 +16,10 @@ alias hgrep='history |grep '
 # Jasypt Stuff
 #
 function jasypt-decrypt() {
-    /Users/scott.pumer/Applications/jasypt/bin/decrypt.sh algorithm=PBEWithMD5AndDES input="$1" password=FuseInator
+    ~/Applications/jasypt/bin/decrypt.sh algorithm=PBEWithMD5AndDES input="$1" password=Fuse-In-ator
 }
 
-alias jasypt-encrypt="/Users/scott.pumer/Downloads/jasypt/bin/encrypt.sh algorithm=PBEWithMD5AndDES input="$1" password=<password here>"
+alias jasypt-encrypt="~/Downloads/jasypt/bin/encrypt.sh algorithm=PBEWithMD5AndDES input="$1" password=<password here>"
 
 #
 # Docker aliases
